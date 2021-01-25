@@ -29,6 +29,7 @@ const Header = () => {
         <HeaderOption Icon={BusinessCenterIcon} title="Jobs" />
         <HeaderOption Icon={ChatIcon} title="Messaging" />
         <HeaderOption Icon={NotificationsIcon} title="Notifications" />
+        <HeaderOption avatar="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.business2community.com%2Flinkedin%2F15-linkedin-profile-image-sins-may-making-01126796&psig=AOvVaw3juu69yaKSnJWNeUBuFB_k&ust=1611702832562000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCIDim5ubuO4CFQAAAAAdAAAAABAD" title='me' />
       </div>
     </div>
   );
