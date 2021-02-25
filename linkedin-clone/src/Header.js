@@ -1,4 +1,5 @@
 import React from "react";
+import { useDispatch } from "react-redux";
 import "./Header.css";
 import SearchIcon from "@material-ui/icons/Search";
 import HeaderOption from "./HeaderOption";
@@ -7,8 +8,17 @@ import SupervisorAccountIcon from "@material-ui/icons/SupervisorAccount";
 import BusinessCenterIcon from "@material-ui/icons/BusinessCenter";
 import ChatIcon from "@material-ui/icons/Chat";
 import NotificationsIcon from "@material-ui/icons/Notifications";
+import { logout } from "./features/userSlice";
+import { auth } from "./firebase";
 
 const Header = () => {
+  const dispatch = useDispatch();
+
+  const logoutOfApp = () => {
+    dispatch(logout());
+    auth.signOut();
+  };
+
   return (
     <div className="header">
       <div className="header__left">
@@ -32,6 +42,7 @@ const Header = () => {
         <HeaderOption
           avatar="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.business2community.com%2Flinkedin%2F15-linkedin-profile-image-sins-may-making-01126796&psig=AOvVaw3juu69yaKSnJWNeUBuFB_k&ust=1611702832562000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCIDim5ubuO4CFQAAAAAdAAAAABAD"
           title="me"
+          onClick={logoutOfApp}
         />
       </div>
     </div>
